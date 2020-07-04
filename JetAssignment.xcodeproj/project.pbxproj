@@ -15,6 +15,7 @@
 		13833F0724B0A250007295FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13833F0624B0A250007295FB /* Assets.xcassets */; };
 		13833F0A24B0A250007295FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13833F0824B0A250007295FB /* LaunchScreen.storyboard */; };
 		13833F1524B0A250007295FB /* JetAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13833F1424B0A250007295FB /* JetAssignmentTests.swift */; };
+		13833F2524B0A3DC007295FB /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13833F2424B0A3DC007295FB /* AppConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		13833F1024B0A250007295FB /* JetAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JetAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13833F1424B0A250007295FB /* JetAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JetAssignmentTests.swift; sourceTree = "<group>"; };
 		13833F1624B0A250007295FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13833F2424B0A3DC007295FB /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		13833EF924B0A24D007295FB /* JetAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				13833F2324B0A3B4007295FB /* Utilities */,
 				13833F2224B0A322007295FB /* View */,
 				13833F2124B0A31B007295FB /* ViewModel */,
 				13833F2024B0A314007295FB /* Model */,
@@ -132,6 +135,14 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		13833F2324B0A3B4007295FB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				13833F2424B0A3DC007295FB /* AppConstant.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13833EFF24B0A24D007295FB /* ViewController.swift in Sources */,
+				13833F2524B0A3DC007295FB /* AppConstant.swift in Sources */,
 				13833EFB24B0A24D007295FB /* AppDelegate.swift in Sources */,
 				13833F0524B0A24D007295FB /* JetAssignment.xcdatamodeld in Sources */,
 				13833EFD24B0A24D007295FB /* SceneDelegate.swift in Sources */,
