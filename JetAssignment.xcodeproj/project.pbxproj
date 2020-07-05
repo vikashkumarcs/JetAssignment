@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,12 @@
 		13833F0A24B0A250007295FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13833F0824B0A250007295FB /* LaunchScreen.storyboard */; };
 		13833F1524B0A250007295FB /* JetAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13833F1424B0A250007295FB /* JetAssignmentTests.swift */; };
 		13833F2524B0A3DC007295FB /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13833F2424B0A3DC007295FB /* AppConstant.swift */; };
+		13833F2724B0DA47007295FB /* CustomTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13833F2624B0DA47007295FB /* CustomTVCell.swift */; };
+		13833F2924B0DC6D007295FB /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13833F2824B0DC6D007295FB /* CellModel.swift */; };
+		13833F2B24B0DCAD007295FB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13833F2A24B0DCAD007295FB /* ViewModel.swift */; };
+		13833F2E24B0DE55007295FB /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13833F2C24B0DE55007295FB /* Connectivity.swift */; };
+		13833F2F24B0DE55007295FB /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13833F2D24B0DE55007295FB /* Service.swift */; };
+		13833F3124B0DEA3007295FB /* DataMaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13833F3024B0DEA3007295FB /* DataMaping.swift */; };
 		5EE0E0E0EEBC0E7A73B50F39 /* Pods_JetAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 163D01D49DAC4217535360D5 /* Pods_JetAssignmentTests.framework */; };
 		8DF9FA2363BDA3B9CFEE9F57 /* Pods_JetAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41519A93E28EA838AF6B507A /* Pods_JetAssignment.framework */; };
 /* End PBXBuildFile section */
@@ -47,6 +53,12 @@
 		13833F1424B0A250007295FB /* JetAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JetAssignmentTests.swift; sourceTree = "<group>"; };
 		13833F1624B0A250007295FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13833F2424B0A3DC007295FB /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		13833F2624B0DA47007295FB /* CustomTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTVCell.swift; sourceTree = "<group>"; };
+		13833F2824B0DC6D007295FB /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
+		13833F2A24B0DCAD007295FB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		13833F2C24B0DE55007295FB /* Connectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		13833F2D24B0DE55007295FB /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		13833F3024B0DEA3007295FB /* DataMaping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataMaping.swift; sourceTree = "<group>"; };
 		163D01D49DAC4217535360D5 /* Pods_JetAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1688A20CCAD66F57C80060AF /* Pods-JetAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetAssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-JetAssignmentTests/Pods-JetAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		41519A93E28EA838AF6B507A /* Pods_JetAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +143,7 @@
 		13833F2024B0A314007295FB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				13833F2824B0DC6D007295FB /* CellModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +151,7 @@
 		13833F2124B0A31B007295FB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				13833F2A24B0DCAD007295FB /* ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -145,6 +159,7 @@
 		13833F2224B0A322007295FB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				13833F2624B0DA47007295FB /* CustomTVCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,6 +167,9 @@
 		13833F2324B0A3B4007295FB /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				13833F3024B0DEA3007295FB /* DataMaping.swift */,
+				13833F2C24B0DE55007295FB /* Connectivity.swift */,
+				13833F2D24B0DE55007295FB /* Service.swift */,
 				13833F2424B0A3DC007295FB /* AppConstant.swift */,
 			);
 			path = Utilities;
@@ -165,7 +183,6 @@
 				0F032EC4930605B3CC09BCAF /* Pods-JetAssignmentTests.debug.xcconfig */,
 				1688A20CCAD66F57C80060AF /* Pods-JetAssignmentTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -346,10 +363,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13833F2724B0DA47007295FB /* CustomTVCell.swift in Sources */,
 				13833EFF24B0A24D007295FB /* ViewController.swift in Sources */,
+				13833F2E24B0DE55007295FB /* Connectivity.swift in Sources */,
 				13833F2524B0A3DC007295FB /* AppConstant.swift in Sources */,
 				13833EFB24B0A24D007295FB /* AppDelegate.swift in Sources */,
+				13833F2924B0DC6D007295FB /* CellModel.swift in Sources */,
 				13833F0524B0A24D007295FB /* JetAssignment.xcdatamodeld in Sources */,
+				13833F2F24B0DE55007295FB /* Service.swift in Sources */,
+				13833F2B24B0DCAD007295FB /* ViewModel.swift in Sources */,
+				13833F3124B0DEA3007295FB /* DataMaping.swift in Sources */,
 				13833EFD24B0A24D007295FB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

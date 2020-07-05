@@ -20,7 +20,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="425" id="ZUB-1I-QXj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTVCellId" rowHeight="425" id="ZUB-1I-QXj" customClass="CustomTVCell" customModule="JetAssignment" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="425"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZUB-1I-QXj" id="Has-pr-5PK">
@@ -112,13 +112,31 @@
                                                 <constraint firstItem="XkE-dW-n18" firstAttribute="leading" secondItem="Has-pr-5PK" secondAttribute="leading" constant="8" id="o0u-ZQ-hxk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="articleCommentLbl" destination="LxD-4L-nGf" id="rEQ-Gh-fks"/>
+                                            <outlet property="articleContentLbl" destination="xgv-HG-I6J" id="yAy-9d-ZQm"/>
+                                            <outlet property="articleImage" destination="x6c-DR-qhk" id="9n9-nS-aWw"/>
+                                            <outlet property="articleLikesLbl" destination="thW-3q-B1F" id="iOc-rD-etb"/>
+                                            <outlet property="articleTitleLbl" destination="eRn-iz-UMi" id="Rdh-s8-FAM"/>
+                                            <outlet property="articleUrlLbl" destination="7zn-C5-mB6" id="pHW-tX-yNm"/>
+                                            <outlet property="avatar" destination="zd2-Hh-JwL" id="mxW-pV-32R"/>
+                                            <outlet property="userDesignationLbl" destination="xOz-Ei-CIC" id="1ia-3Z-SX6"/>
+                                            <outlet property="userNameLbl" destination="bDF-8d-W8A" id="V1U-2V-PeR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="qO7-Q4-0fe"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="MLf-WF-nAy"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableview" destination="dGH-Ok-CaB" id="9SS-gg-KhT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

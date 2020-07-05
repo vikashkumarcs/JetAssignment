@@ -1,0 +1,6 @@
+framework module Pods_JetAssignment {
+  umbrella header "Pods-JetAssignment-umbrella.h"
+
+  export *
+  module * { export * }
+}
