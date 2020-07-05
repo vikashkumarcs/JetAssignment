@@ -52,9 +52,5 @@ class ViewModel {
             self.dataSource.append(contentsOf: collection)
         })
     }
-    
-    func mappingData(json:Any, cellInfo: inout CellModel) {
-//        self.dataMaping.mappingData(item: [json], cellInfo: &cellInfo)
-    }
 }
 

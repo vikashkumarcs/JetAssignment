@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         initializer()
-        self.title = "Articles"
+        self.title = AppConstant.articles
     }
     
     private func initializer() {
@@ -44,11 +44,10 @@ class ViewController: UIViewController {
     }
 
     func showAlert( _ message: String ) {
-        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-        alert.addAction( UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        let alert = UIAlertController(title: AppConstant.alert, message: message, preferredStyle: .alert)
+        alert.addAction( UIAlertAction(title: AppConstant.ok, style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-
 }
 
 extension ViewController:UITableViewDelegate {
@@ -62,7 +61,7 @@ extension ViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        let cell1 = tableView.dequeueReusableCell(withIdentifier: "CustomTVCellId", for: indexPath) as? CustomTVCell
+        let cell1 = tableView.dequeueReusableCell(withIdentifier: AppConstant.cellId, for: indexPath) as? CustomTVCell
         
         guard let cell = cell1 else {
             return UITableViewCell()

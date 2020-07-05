@@ -25,7 +25,7 @@ class CustomTVCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        avatar.layer.borderWidth = 1
+        avatar.layer.borderWidth = CGFloat(AppConstant.avatarBorderWidth)
         avatar.layer.masksToBounds = false
         avatar.layer.borderColor = UIColor.lightGray.cgColor
         avatar.layer.cornerRadius = avatar.frame.height/2
@@ -44,7 +44,7 @@ class CustomTVCell: UITableViewCell {
         self.articleUrlLbl.text = ""
         self.avatar.image = nil
         self.articleImage.image = nil
-        self.imageHeightConstraint.constant = 158
+        self.imageHeightConstraint.constant = CGFloat(AppConstant.mediaImageHeight)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -58,29 +58,28 @@ class CustomTVCell: UITableViewCell {
         self.userDesignationLbl.text = cellInfo.userDesignation
         
         if let comments = cellInfo.comments?.formatUsingAbbrevation() {
-            self.articleCommentLbl.text = "\(comments)\(" Comments ")"
+            self.articleCommentLbl.text = "\(comments)\(AppConstant.comments)"
         }
         
         if let likes = cellInfo.likes?.formatUsingAbbrevation() {
-            self.articleLikesLbl.text = "\(likes)\(" Likes ")"
+            self.articleLikesLbl.text = "\(likes)\(AppConstant.likes)"
         }
         
         self.articleContentLbl.text = cellInfo.articleDescription
         self.articleTitleLbl.text = cellInfo.articleTitle
         self.articleUrlLbl.text = cellInfo.articleUrl
         
-        guard let avatar = cellInfo.avatarurl,
-            let avatarUrl = URL(string: avatar) else {
-            return
+        if let avatar = cellInfo.avatarurl,
+            let avatarUrl = URL(string: avatar) {
+            self.avatar.load(url: avatarUrl)
         }
-        self.avatar.load(url: avatarUrl)
         
-        guard let image = cellInfo.imageurl,
-            let imageUrl = URL(string: image) else {
+        if let image = cellInfo.imageurl,
+            let imageUrl = URL(string: image) {
+            self.articleImage.load(url: imageUrl)
+        } else {
             self.imageHeightConstraint.constant = 0
-            return
         }
-        self.articleImage.load(url: imageUrl)
     }
 }
 
