@@ -22,6 +22,7 @@
 		13833F2E24B0DE55007295FB /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13833F2C24B0DE55007295FB /* Connectivity.swift */; };
 		13833F2F24B0DE55007295FB /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13833F2D24B0DE55007295FB /* Service.swift */; };
 		13833F3124B0DEA3007295FB /* DataMaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13833F3024B0DEA3007295FB /* DataMaping.swift */; };
+		13833F3324B1C37B007295FB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13833F3224B1C37B007295FB /* Utilities.swift */; };
 		5EE0E0E0EEBC0E7A73B50F39 /* Pods_JetAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 163D01D49DAC4217535360D5 /* Pods_JetAssignmentTests.framework */; };
 		8DF9FA2363BDA3B9CFEE9F57 /* Pods_JetAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41519A93E28EA838AF6B507A /* Pods_JetAssignment.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		13833F2C24B0DE55007295FB /* Connectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		13833F2D24B0DE55007295FB /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		13833F3024B0DEA3007295FB /* DataMaping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataMaping.swift; sourceTree = "<group>"; };
+		13833F3224B1C37B007295FB /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		163D01D49DAC4217535360D5 /* Pods_JetAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1688A20CCAD66F57C80060AF /* Pods-JetAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetAssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-JetAssignmentTests/Pods-JetAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		41519A93E28EA838AF6B507A /* Pods_JetAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,7 @@
 				13833F2C24B0DE55007295FB /* Connectivity.swift */,
 				13833F2D24B0DE55007295FB /* Service.swift */,
 				13833F2424B0A3DC007295FB /* AppConstant.swift */,
+				13833F3224B1C37B007295FB /* Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				13833F2524B0A3DC007295FB /* AppConstant.swift in Sources */,
 				13833EFB24B0A24D007295FB /* AppDelegate.swift in Sources */,
 				13833F2924B0DC6D007295FB /* CellModel.swift in Sources */,
+				13833F3324B1C37B007295FB /* Utilities.swift in Sources */,
 				13833F0524B0A24D007295FB /* JetAssignment.xcdatamodeld in Sources */,
 				13833F2F24B0DE55007295FB /* Service.swift in Sources */,
 				13833F2B24B0DCAD007295FB /* ViewModel.swift in Sources */,

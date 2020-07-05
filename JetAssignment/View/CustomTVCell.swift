@@ -19,10 +19,32 @@ class CustomTVCell: UITableViewCell {
     @IBOutlet weak var articleCommentLbl: UILabel!
     @IBOutlet weak var articleImage: UIImageView!
     @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        avatar.layer.borderWidth = 1
+        avatar.layer.masksToBounds = false
+        avatar.layer.borderColor = UIColor.lightGray.cgColor
+        avatar.layer.cornerRadius = avatar.frame.height/2
+        avatar.clipsToBounds = true
+        
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.userNameLbl.text = ""
+        self.userDesignationLbl.text = ""
+        self.articleCommentLbl.text = ""
+        self.articleLikesLbl.text = ""
+        self.articleContentLbl.text = ""
+        self.articleTitleLbl.text = ""
+        self.articleUrlLbl.text = ""
+        self.avatar.image = nil
+        self.articleImage.image = nil
+        self.imageHeightConstraint.constant = 158
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -34,9 +56,33 @@ class CustomTVCell: UITableViewCell {
     func cellConfiguration(cellInfo: CellModel) {
         self.userNameLbl.text = cellInfo.userName
         self.userDesignationLbl.text = cellInfo.userDesignation
-        self.articleCommentLbl.text = String(cellInfo.comments!)
-        self.articleLikesLbl.text = String(cellInfo.likes!)
+        
+        if let comments = cellInfo.comments?.formatUsingAbbrevation() {
+            self.articleCommentLbl.text = "\(comments)\(" Comments ")"
+        }
+        
+        if let likes = cellInfo.likes?.formatUsingAbbrevation() {
+            self.articleLikesLbl.text = "\(likes)\(" Likes ")"
+        }
+        
         self.articleContentLbl.text = cellInfo.articleDescription
+        self.articleTitleLbl.text = cellInfo.articleTitle
+        self.articleUrlLbl.text = cellInfo.articleUrl
+        
+        guard let avatar = cellInfo.avatarurl,
+            let avatarUrl = URL(string: avatar) else {
+            return
+        }
+        self.avatar.load(url: avatarUrl)
+        
+        guard let image = cellInfo.imageurl,
+            let imageUrl = URL(string: image) else {
+            self.imageHeightConstraint.constant = 0
+            return
+        }
+        self.articleImage.load(url: imageUrl)
     }
-
 }
+
+
+

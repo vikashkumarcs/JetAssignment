@@ -31,26 +31,4 @@ class APIService {
             complitionHandler(value)
         }
     }
-    
-    
-    /*
-    func GetData(urlString: String, dispatchGroup:DispatchGroup? = nil, complitionHandler:@escaping (Any)-> Void) {
-        
-        dispatchGroup?.enter()
-        guard let url = URL(string: urlString)
-            else {
-                return
-        }
-        
-        DispatchQueue.global().async { [weak self] in
-        if let data = try? Data(contentsOf: url) {
-                if let json = try? JSONSerialization.jsonObject(with: data, options: []) {
-//                    self?.viewModel.jsonResponse(response: json)
-                    complitionHandler(json)
-                    dispatchGroup?.leave()
-                }
-            }
-        }
-    }
-    */
 }
